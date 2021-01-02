@@ -61,9 +61,11 @@ func _on_node_removed(n):
 
 
 func sync_state_helper(id: int, node):
+    # TODO: Check if duplicates appear when an scene instanciates one inside it
     if node.filename != "":
         var p = self.get_path_to(node.get_parent())
         rpc_id(id, "create_node", node.filename, p, node.name)
+    # HACK: Checking the node name doesn't sound like a good practice
     if node.name == "MultiplayerComponent":
         node.sync_state_wrapper(id)
     for x in node.get_children():
