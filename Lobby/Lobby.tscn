@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Lobby/Lobby.gd" type="Script" id=1]
+
+[node name="Lobby" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+port = 8000
+players = 30
+
+[node name="Ventana Conexión" type="VBoxContainer" parent="."]
+margin_left = 464.0
+margin_top = 276.0
+margin_right = 559.0
+margin_bottom = 324.0
+rect_pivot_offset = Vector2( 50, 25 )
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Entrada IP" type="HBoxContainer" parent="Ventana Conexión"]
+margin_right = 95.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Ventana Conexión/Entrada IP"]
+margin_top = 5.0
+margin_right = 17.0
+margin_bottom = 19.0
+text = "IP:"
+
+[node name="LineEdit" type="LineEdit" parent="Ventana Conexión/Entrada IP"]
+margin_left = 21.0
+margin_right = 95.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+text = "127.0.0.1"
+
+[node name="Host-Client" type="HBoxContainer" parent="Ventana Conexión"]
+margin_top = 28.0
+margin_right = 95.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Host" type="Button" parent="Ventana Conexión/Host-Client"]
+margin_right = 42.0
+margin_bottom = 20.0
+text = "Host"
+
+[node name="Client" type="Button" parent="Ventana Conexión/Host-Client"]
+margin_left = 46.0
+margin_right = 95.0
+margin_bottom = 20.0
+text = "Client"
+[connection signal="pressed" from="Ventana Conexión/Host-Client/Host" to="." method="_on_Host_pressed"]
+[connection signal="pressed" from="Ventana Conexión/Host-Client/Client" to="." method="_on_Client_pressed"]
