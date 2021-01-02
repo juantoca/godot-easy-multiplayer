@@ -25,7 +25,7 @@ run/main_scene="res://Lobby/Lobby.tscn"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "easy_multiplayer" )
+enabled=PoolStringArray( "Todo_Manager", "easy_multiplayer" )
 
 [gdnative]
 

@@ -39,6 +39,9 @@ func player_connected(id):
 func player_disconnected(id):
     pass
 
+
+
+# FIXME: Support grandchilds
 func _on_node_added(n):
     if(self.is_network_master()):
         var clas = n.get_class()
@@ -50,6 +53,12 @@ func _on_node_removed(n):
         if(get_tree().is_network_server()):
             var p = self.get_path_to(n)
             rpc("remove_node", p)
+
+
+
+
+
+
 
 func sync_state_helper(id: int, node):
     if node.filename != "":

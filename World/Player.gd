@@ -13,4 +13,8 @@ func _process(delta):
             self.position += Vector2(-delta*400, 0)
         if Input.is_key_pressed(KEY_D):
             self.position += Vector2(delta*400, 0)
+        if Input.is_key_pressed(KEY_SPACE):
+            var n = preload("res://World/SpriteScene.tscn").instance()
+            n.position += Vector2(30, 0)
+            self.add_child(n)
 

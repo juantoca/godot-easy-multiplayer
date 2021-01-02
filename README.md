@@ -18,4 +18,3 @@ This plugin is based upon 2 nodes:
 it captures all multiplayer signals and take care of syncing game state with new players. In case server creates/destroys a child node, it will take care 
 to do the same in all connected peers  
 
-
