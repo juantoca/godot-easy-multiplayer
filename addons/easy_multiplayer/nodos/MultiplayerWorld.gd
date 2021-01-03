@@ -9,6 +9,7 @@ extends Node
 
 const mp_component_name = "MultiplayerComponent"
 
+
 func _ready():
     get_tree().connect("network_peer_connected", self, "_on_peer_connected")
     get_tree().connect("network_peer_disconnected", self, "_on_peer_disconnected")
@@ -39,12 +40,8 @@ func player_connected(id):
 func player_disconnected(id):
     pass
 
-
-
-# FIXME: Support grandchilds
 func _on_node_added(n):
-    if(self.is_network_master()):
-        var clas = n.get_class()
+    if(get_tree().is_network_server()):
         var p = self.get_path_to(n.get_parent())
         rpc("create_node", n.filename, p, n.name)
 
@@ -53,12 +50,6 @@ func _on_node_removed(n):
         if(get_tree().is_network_server()):
             var p = self.get_path_to(n)
             rpc("remove_node", p)
-
-
-
-
-
-
 
 func sync_state_helper(id: int, node):
     # TODO: Check if duplicates appear when an scene instanciates one inside it
