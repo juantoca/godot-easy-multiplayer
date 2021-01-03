@@ -16,6 +16,6 @@ This plugin is based upon 2 nodes:
 
 * *MultiplayerWorld*: Node that defines a game instance(for example, this node would be the equivalent to an Starcraft match or an EVE online solar system), 
 it captures all multiplayer signals and take care of syncing game state with new players. In case server creates/destroys a child node, it will take care 
-to do the shame in all connected peers  
+to do the same in all connected peers  
 
 
