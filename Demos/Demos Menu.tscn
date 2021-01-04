@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Demos/Menu Entry.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Demos/Simple Movement/Lobby/Lobby.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Theme" id=1]
+
+[node name="Demos Menu" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 14.0
+text = "Please, select the demo to run"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_top = 18.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+
+[node name="VSplitContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 1024.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+
+[node name="Simple Movement" parent="ScrollContainer/VSplitContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 20.0
+text = "Simple Movement"
+scene_to_load = ExtResource( 3 )
