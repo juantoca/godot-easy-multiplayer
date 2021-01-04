@@ -5,6 +5,7 @@ func player_connected(id):
     var n = p.instance()
     n.name = str(id)
     self.add_child(n)
+    n.modulate = Color(randf(), randf(), randf())
     n.get_node("MultiplayerComponent").set_master_wrapper(id)
 
 func player_disconnected(id):
