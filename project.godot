@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Multiplayer Test"
+config/name="Multiplayer"
 run/main_scene="res://Lobby/Lobby.tscn"
 
 [editor_plugins]
