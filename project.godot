@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Multiplayer"
-run/main_scene="res://Lobby/Lobby.tscn"
+run/main_scene="res://Demos/Simple Movement/Lobby/Lobby.tscn"
 
 [editor_plugins]
 
