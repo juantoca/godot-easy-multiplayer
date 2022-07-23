@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "",
 "class": "GitAPI",
 "language": "NativeScript",
-"path": "res://git_api.gdns"
+"path": "res://addons/godot-git-plugin/git_api.gdns"
 } ]
 _global_script_class_icons={
 "GitAPI": ""
@@ -29,7 +29,7 @@ enabled=PoolStringArray( "Todo_Manager", "easy_multiplayer" )
 
 [gdnative]
 
-singletons=[ "res://git_api.gdnlib" ]
+singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib", "res://git_api.gdnlib" ]
 
 [rendering]
 
