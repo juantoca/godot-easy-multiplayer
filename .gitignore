@@ -7,3 +7,9 @@ build/
 lib/
 *.so
 
+
+# Godot exports
+
+*.pck
+*.x86_64
+
